@@ -14,6 +14,7 @@
 		603456BB1FDB1F4500291A73 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BA1FDB1F4500291A73 /* TodosViewController.swift */; };
 		603456BD1FDB216E00291A73 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BC1FDB216E00291A73 /* TodoListViewController.swift */; };
 		603456BF1FDB23FC00291A73 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BE1FDB23FC00291A73 /* Todo.swift */; };
+		60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E7C18B1FDB29020013FA59 /* Titled.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		603456BA1FDB1F4500291A73 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		603456BC1FDB216E00291A73 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		603456BE1FDB23FC00291A73 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		60E7C18B1FDB29020013FA59 /* Titled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titled.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				603456A81FDAF8D000291A73 /* AppDelegate.swift */,
 				603456BE1FDB23FC00291A73 /* Todo.swift */,
+				60E7C18B1FDB29020013FA59 /* Titled.swift */,
 				603456AC1FDAF8D000291A73 /* Main.storyboard */,
 				603456BA1FDB1F4500291A73 /* TodosViewController.swift */,
 				603456BC1FDB216E00291A73 /* TodoListViewController.swift */,
@@ -146,6 +149,7 @@
 				603456BB1FDB1F4500291A73 /* TodosViewController.swift in Sources */,
 				603456A91FDAF8D000291A73 /* AppDelegate.swift in Sources */,
 				603456BF1FDB23FC00291A73 /* Todo.swift in Sources */,
+				60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

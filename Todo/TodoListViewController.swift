@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
-  var todos: [Todo] = []
+  var todos: [Titled] = []
 
   // MARK: - Table view data source
 

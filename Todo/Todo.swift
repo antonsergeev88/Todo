@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Todo {
+struct Todo: Titled {
   let id: UUID
   var title: String?
 
