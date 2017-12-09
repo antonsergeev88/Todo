@@ -15,6 +15,7 @@
 		603456BD1FDB216E00291A73 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BC1FDB216E00291A73 /* TodoListViewController.swift */; };
 		603456BF1FDB23FC00291A73 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BE1FDB23FC00291A73 /* Todo.swift */; };
 		60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E7C18B1FDB29020013FA59 /* Titled.swift */; };
+		60E7C18E1FDB305F0013FA59 /* ContentObjectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		603456BC1FDB216E00291A73 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		603456BE1FDB23FC00291A73 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		60E7C18B1FDB29020013FA59 /* Titled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titled.swift; sourceTree = "<group>"; };
+		60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentObjectRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				603456AC1FDAF8D000291A73 /* Main.storyboard */,
 				603456BA1FDB1F4500291A73 /* TodosViewController.swift */,
 				603456BC1FDB216E00291A73 /* TodoListViewController.swift */,
+				60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */,
 				603456AF1FDAF8D000291A73 /* Assets.xcassets */,
 				603456B11FDAF8D000291A73 /* LaunchScreen.storyboard */,
 				603456B41FDAF8D000291A73 /* Info.plist */,
@@ -147,6 +150,7 @@
 			files = (
 				603456BD1FDB216E00291A73 /* TodoListViewController.swift in Sources */,
 				603456BB1FDB1F4500291A73 /* TodosViewController.swift in Sources */,
+				60E7C18E1FDB305F0013FA59 /* ContentObjectRepresentable.swift in Sources */,
 				603456A91FDAF8D000291A73 /* AppDelegate.swift in Sources */,
 				603456BF1FDB23FC00291A73 /* Todo.swift in Sources */,
 				60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */,

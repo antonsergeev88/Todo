@@ -10,8 +10,15 @@ import UIKit
 
 class TodosViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  var todos: [Todo] = [Todo("asdf"), Todo("qwerty"), Todo("zxcbasdf")]
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let identifier = segue.identifier, identifier == "TodoListSegue" {
+      guard let destination = segue.destination as? ContentObjectRepresentable else {
+        return
+      }
+      destination.representedObject = todos
     }
+  }
 
 }

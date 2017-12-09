@@ -8,7 +8,19 @@
 
 import UIKit
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: UITableViewController, ContentObjectRepresentable {
+
+  var representedObject: Any? {
+    get {
+      return todos
+    }
+    set {
+      guard let newValue = newValue as? [Titled] else {
+        return
+      }
+      todos = newValue
+    }
+  }
 
   var todos: [Titled] = []
 
