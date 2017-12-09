@@ -15,17 +15,60 @@
             <objects>
                 <viewController id="Qm2-BF-wpZ" customClass="TodoDetailViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okU-i2-gv8">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-En-DNM">
+                                <rect key="frame" x="8" y="42" width="284" height="166.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx4-zL-wvI">
+                                        <rect key="frame" x="0.0" y="0.0" width="284" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Onr-pc-n6I">
+                                        <rect key="frame" x="0.0" y="68.5" width="284" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="P1W-eE-ltA">
+                                        <rect key="frame" x="0.0" y="128.5" width="284" height="38"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krr-RZ-sGc">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="Cancel"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el2-m6-bwB">
+                                                <rect key="frame" x="239" y="0.0" width="45" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xei-En-DNM" firstAttribute="centerY" secondItem="okU-i2-gv8" secondAttribute="centerY" id="EEd-Dg-KKz"/>
+                            <constraint firstItem="Xei-En-DNM" firstAttribute="leading" secondItem="Ga3-FU-InX" secondAttribute="leading" constant="8" id="JXv-6F-Sh0"/>
+                            <constraint firstItem="Ga3-FU-InX" firstAttribute="trailing" secondItem="Xei-En-DNM" secondAttribute="trailing" constant="8" id="owW-9h-Qw9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ga3-FU-InX"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
-                    <size key="freeformSize" width="300" height="300"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="250"/>
+                    <size key="freeformSize" width="300" height="250"/>
+                    <connections>
+                        <segue destination="5te-ML-0NL" kind="unwind" unwindAction="addNewTodo:" id="nkH-Gr-K8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX4-Oc-y1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5te-ML-0NL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="70" y="172"/>
+            <point key="canvasLocation" x="68.799999999999997" y="171.81409295352324"/>
         </scene>
     </scenes>
 </document>

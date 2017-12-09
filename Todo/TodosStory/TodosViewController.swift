@@ -25,4 +25,8 @@ class TodosViewController: UIViewController {
     performSegue(withIdentifier: "AddTodoSegue", sender: sender)
   }
 
+  @IBAction func addNewTodo(_ segue: UIStoryboardSegue) {
+    print("asdf")
+  }
+
 }
