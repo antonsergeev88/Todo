@@ -21,4 +21,8 @@ class TodosViewController: UIViewController {
     }
   }
 
+  @IBAction func addTodo(_ sender: Any) {
+    performSegue(withIdentifier: "AddTodoSegue", sender: sender)
+  }
+
 }

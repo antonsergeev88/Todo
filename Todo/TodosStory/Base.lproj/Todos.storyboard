@@ -28,6 +28,9 @@
                                 <rect key="frame" x="280" y="732" width="87" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Add Todo"/>
+                                <connections>
+                                    <action selector="addTodo:" destination="lUL-Ic-aoV" eventType="touchUpInside" id="b2Z-f1-H8i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,10 +45,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qov-zw-5vY"/>
                     </view>
+                    <connections>
+                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="AddTodoSegue" id="jBY-cA-h95"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JP-it-3YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="135.96059113300493"/>
+        </scene>
+        <!--TodoDetail-->
+        <scene sceneID="7oU-SM-bHn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TodoDetail" id="JGz-Nj-SNc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxX-E4-adA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="700"/>
         </scene>
         <!--Todo List View Controller-->
         <scene sceneID="4gd-qb-AJD">
