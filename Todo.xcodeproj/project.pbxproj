@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		603456A91FDAF8D000291A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456A81FDAF8D000291A73 /* AppDelegate.swift */; };
-		603456AE1FDAF8D000291A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603456AC1FDAF8D000291A73 /* Main.storyboard */; };
+		603456AE1FDAF8D000291A73 /* Todos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603456AC1FDAF8D000291A73 /* Todos.storyboard */; };
 		603456B01FDAF8D000291A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603456AF1FDAF8D000291A73 /* Assets.xcassets */; };
 		603456B31FDAF8D000291A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603456B11FDAF8D000291A73 /* LaunchScreen.storyboard */; };
 		603456BB1FDB1F4500291A73 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603456BA1FDB1F4500291A73 /* TodosViewController.swift */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		603456A51FDAF8D000291A73 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603456A81FDAF8D000291A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		603456AD1FDAF8D000291A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		603456AD1FDAF8D000291A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Todos.storyboard; sourceTree = "<group>"; };
 		603456AF1FDAF8D000291A73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		603456B21FDAF8D000291A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		603456B41FDAF8D000291A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,15 +65,23 @@
 				603456A81FDAF8D000291A73 /* AppDelegate.swift */,
 				603456BE1FDB23FC00291A73 /* Todo.swift */,
 				60E7C18B1FDB29020013FA59 /* Titled.swift */,
-				603456AC1FDAF8D000291A73 /* Main.storyboard */,
-				603456BA1FDB1F4500291A73 /* TodosViewController.swift */,
-				603456BC1FDB216E00291A73 /* TodoListViewController.swift */,
+				60E7C18F1FDBC93F0013FA59 /* TodosStory */,
 				60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */,
 				603456AF1FDAF8D000291A73 /* Assets.xcassets */,
 				603456B11FDAF8D000291A73 /* LaunchScreen.storyboard */,
 				603456B41FDAF8D000291A73 /* Info.plist */,
 			);
 			path = Todo;
+			sourceTree = "<group>";
+		};
+		60E7C18F1FDBC93F0013FA59 /* TodosStory */ = {
+			isa = PBXGroup;
+			children = (
+				603456AC1FDAF8D000291A73 /* Todos.storyboard */,
+				603456BA1FDB1F4500291A73 /* TodosViewController.swift */,
+				603456BC1FDB216E00291A73 /* TodoListViewController.swift */,
+			);
+			path = TodosStory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			files = (
 				603456B31FDAF8D000291A73 /* LaunchScreen.storyboard in Resources */,
 				603456B01FDAF8D000291A73 /* Assets.xcassets in Resources */,
-				603456AE1FDAF8D000291A73 /* Main.storyboard in Resources */,
+				603456AE1FDAF8D000291A73 /* Todos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,12 +168,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		603456AC1FDAF8D000291A73 /* Main.storyboard */ = {
+		603456AC1FDAF8D000291A73 /* Todos.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				603456AD1FDAF8D000291A73 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Todos.storyboard;
 			sourceTree = "<group>";
 		};
 		603456B11FDAF8D000291A73 /* LaunchScreen.storyboard */ = {
