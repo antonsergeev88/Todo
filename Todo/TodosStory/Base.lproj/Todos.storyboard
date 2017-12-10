@@ -46,7 +46,7 @@
                         <viewLayoutGuide key="safeArea" id="qov-zw-5vY"/>
                     </view>
                     <connections>
-                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="AddTodo" id="jBY-cA-h95"/>
+                        <segue destination="JGz-Nj-SNc" kind="custom" identifier="AddTodo" customClass="PartScreenSegue" customModule="TodoApp" customModuleProvider="target" id="jBY-cA-h95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JP-it-3YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -59,7 +59,7 @@
                 <viewControllerPlaceholder storyboardName="TodoDetail" id="JGz-Nj-SNc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxX-E4-adA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="441" y="739"/>
+            <point key="canvasLocation" x="398" y="756"/>
         </scene>
         <!--Todo List View Controller-->
         <scene sceneID="4gd-qb-AJD">
@@ -94,15 +94,15 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="EditTodo" id="jXg-Gp-jNe"/>
+                        <segue destination="JGz-Nj-SNc" kind="custom" identifier="EditTodo" customClass="PartScreenSegue" customModule="TodoApp" customModuleProvider="target" id="jXg-Gp-jNe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rls-DY-oEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122" y="136"/>
+            <point key="canvasLocation" x="753" y="136"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jXg-Gp-jNe"/>
+        <segue reference="jBY-cA-h95"/>
     </inferredMetricsTieBreakers>
 </document>
