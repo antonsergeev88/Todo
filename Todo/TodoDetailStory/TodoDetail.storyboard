@@ -13,7 +13,7 @@
         <!--Todo Detail View Controller-->
         <scene sceneID="StO-kN-HGf">
             <objects>
-                <viewController id="Qm2-BF-wpZ" customClass="TodoDetailViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qm2-BF-wpZ" customClass="TodoDetailViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="okU-i2-gv8">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancel:" destination="Qm2-BF-wpZ" eventType="touchUpInside" id="Fh3-PR-XO0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="el2-m6-bwB">
                                                 <rect key="frame" x="239" y="0.0" width="45" height="38"/>
@@ -67,6 +70,7 @@
                     <connections>
                         <outlet property="titleField" destination="Onr-pc-n6I" id="omt-bc-lHl"/>
                         <segue destination="5te-ML-0NL" kind="unwind" identifier="SaveTodo" unwindAction="saveTodo:" id="nkH-Gr-K8Z"/>
+                        <segue destination="5te-ML-0NL" kind="unwind" identifier="CancelEditing" unwindAction="cancelEditingTodo:" id="IjB-d0-Ydh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX4-Oc-y1d" userLabel="First Responder" sceneMemberID="firstResponder"/>

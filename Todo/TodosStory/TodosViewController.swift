@@ -33,6 +33,10 @@ class TodosViewController: UIViewController {
     }
   }
 
+  @IBAction func cancelEditingTodo(_ segue: UIStoryboardSegue) {
+    return
+  }
+
   @objc func prepareForTodoList(_ segue: UIStoryboardSegue, sender: Any?) {
     guard let destination = segue.destination as? ContentObjectRepresentable else {
       return

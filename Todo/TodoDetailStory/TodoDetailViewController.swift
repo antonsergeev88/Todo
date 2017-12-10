@@ -22,8 +22,16 @@ class TodoDetailViewController: UIViewController {
     performSegue(withIdentifier: "SaveTodo", sender: self)
   }
 
+  @IBAction func cancel(_ sender: Any) {
+    performSegue(withIdentifier: "CancelEditing", sender: self)
+  }
+
   @objc func prepareForSaveTodo(_ segue: UIStoryboardSegue, sender: Any?) {
     todo?.title = titleField.text
+  }
+
+  @objc func prepareForCancelEditing(_ segue: UIStoryboardSegue, sender: Any?) {
+    todo = nil
   }
 
 }
