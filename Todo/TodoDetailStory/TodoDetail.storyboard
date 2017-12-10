@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-En-DNM">
                                 <rect key="frame" x="8" y="42" width="284" height="166.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx4-zL-wvI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx4-zL-wvI">
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
@@ -45,6 +45,9 @@
                                                 <rect key="frame" x="239" y="0.0" width="45" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="save:" destination="Qm2-BF-wpZ" eventType="touchUpInside" id="RGY-nH-s6I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -62,7 +65,7 @@
                     <value key="contentSizeForViewInPopover" type="size" width="300" height="250"/>
                     <size key="freeformSize" width="300" height="250"/>
                     <connections>
-                        <segue destination="5te-ML-0NL" kind="unwind" unwindAction="addNewTodo:" id="nkH-Gr-K8Z"/>
+                        <segue destination="5te-ML-0NL" kind="unwind" identifier="SaveTodoSegue" unwindAction="saveTodo:" id="nkH-Gr-K8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX4-Oc-y1d" userLabel="First Responder" sceneMemberID="firstResponder"/>

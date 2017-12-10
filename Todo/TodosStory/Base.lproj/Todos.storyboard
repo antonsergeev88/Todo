@@ -21,7 +21,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEC-ox-MkA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <connections>
-                                    <segue destination="b3x-Jd-6DY" kind="embed" identifier="TodoListSegue" id="hum-6J-NJf"/>
+                                    <segue destination="b3x-Jd-6DY" kind="embed" identifier="TodoList" id="hum-6J-NJf"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEZ-Sb-37g">

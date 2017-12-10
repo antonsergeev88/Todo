@@ -16,4 +16,11 @@ class TodoDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+  @IBAction func save(_ sender: Any) {
+    performSegue(withIdentifier: "SaveTodoSegue", sender: self)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    print("prepare for SaveTodoSegue")
+  }
 }
