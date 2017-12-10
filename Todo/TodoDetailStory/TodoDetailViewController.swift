@@ -14,6 +14,10 @@ class TodoDetailViewController: UIViewController {
 
   @IBOutlet weak var titleField: UITextField!
 
+  override func viewDidLoad() {
+    titleField.text = todo?.title
+  }
+
   @IBAction func save(_ sender: Any) {
     performSegue(withIdentifier: "SaveTodo", sender: self)
   }
