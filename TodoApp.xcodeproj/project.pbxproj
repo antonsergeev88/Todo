@@ -18,6 +18,9 @@
 		60BAB2C01FDD96E6004DA7CD /* PartScreenPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAB2BF1FDD96E6004DA7CD /* PartScreenPresentationController.swift */; };
 		60BAB2C21FDDABB1004DA7CD /* FadeInPresentedAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAB2C11FDDABB1004DA7CD /* FadeInPresentedAnimator.swift */; };
 		60BAB2C41FDDBB27004DA7CD /* FadeOutDismissedAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAB2C31FDDBB27004DA7CD /* FadeOutDismissedAnimator.swift */; };
+		60BAB2C71FDDC138004DA7CD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAB2C61FDDC138004DA7CD /* ContainerViewController.swift */; };
+		60BAB2C91FDDC2B1004DA7CD /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60BAB2C81FDDC2B1004DA7CD /* Menu.storyboard */; };
+		60BAB2CC1FDDC3C8004DA7CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BAB2CB1FDDC3C8004DA7CD /* MenuViewController.swift */; };
 		60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E7C18B1FDB29020013FA59 /* Titled.swift */; };
 		60E7C18E1FDB305F0013FA59 /* ContentObjectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */; };
 		60E7C1911FDBC9BD0013FA59 /* TodoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E7C1901FDBC9BD0013FA59 /* TodoDetail.storyboard */; };
@@ -38,6 +41,9 @@
 		60BAB2BF1FDD96E6004DA7CD /* PartScreenPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartScreenPresentationController.swift; sourceTree = "<group>"; };
 		60BAB2C11FDDABB1004DA7CD /* FadeInPresentedAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInPresentedAnimator.swift; sourceTree = "<group>"; };
 		60BAB2C31FDDBB27004DA7CD /* FadeOutDismissedAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutDismissedAnimator.swift; sourceTree = "<group>"; };
+		60BAB2C61FDDC138004DA7CD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		60BAB2C81FDDC2B1004DA7CD /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		60BAB2CB1FDDC3C8004DA7CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		60E7C18B1FDB29020013FA59 /* Titled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titled.swift; sourceTree = "<group>"; };
 		60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentObjectRepresentable.swift; sourceTree = "<group>"; };
 		60E7C1901FDBC9BD0013FA59 /* TodoDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodoDetail.storyboard; sourceTree = "<group>"; };
@@ -77,9 +83,11 @@
 				603456A81FDAF8D000291A73 /* AppDelegate.swift */,
 				603456BE1FDB23FC00291A73 /* Todo.swift */,
 				60E7C18B1FDB29020013FA59 /* Titled.swift */,
+				60BAB2C61FDDC138004DA7CD /* ContainerViewController.swift */,
 				60E7C18F1FDBC93F0013FA59 /* TodosStory */,
 				60E7C1941FDBCA1B0013FA59 /* TodoDetailStory */,
 				60E7C18D1FDB305F0013FA59 /* ContentObjectRepresentable.swift */,
+				60BAB2CA1FDDC2B6004DA7CD /* MenuStory */,
 				60BAB2C51FDDBEB8004DA7CD /* PartScreenPresentation */,
 				603456AF1FDAF8D000291A73 /* Assets.xcassets */,
 				603456B11FDAF8D000291A73 /* LaunchScreen.storyboard */,
@@ -97,6 +105,15 @@
 				60BAB2C31FDDBB27004DA7CD /* FadeOutDismissedAnimator.swift */,
 			);
 			path = PartScreenPresentation;
+			sourceTree = "<group>";
+		};
+		60BAB2CA1FDDC2B6004DA7CD /* MenuStory */ = {
+			isa = PBXGroup;
+			children = (
+				60BAB2C81FDDC2B1004DA7CD /* Menu.storyboard */,
+				60BAB2CB1FDDC3C8004DA7CD /* MenuViewController.swift */,
+			);
+			path = MenuStory;
 			sourceTree = "<group>";
 		};
 		60E7C18F1FDBC93F0013FA59 /* TodosStory */ = {
@@ -177,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BAB2C91FDDC2B1004DA7CD /* Menu.storyboard in Resources */,
 				603456B31FDAF8D000291A73 /* LaunchScreen.storyboard in Resources */,
 				60E7C1911FDBC9BD0013FA59 /* TodoDetail.storyboard in Resources */,
 				603456B01FDAF8D000291A73 /* Assets.xcassets in Resources */,
@@ -198,9 +216,11 @@
 				60E7C18E1FDB305F0013FA59 /* ContentObjectRepresentable.swift in Sources */,
 				603456A91FDAF8D000291A73 /* AppDelegate.swift in Sources */,
 				603456BF1FDB23FC00291A73 /* Todo.swift in Sources */,
+				60BAB2CC1FDDC3C8004DA7CD /* MenuViewController.swift in Sources */,
 				60E7C18C1FDB29020013FA59 /* Titled.swift in Sources */,
 				60BAB2C21FDDABB1004DA7CD /* FadeInPresentedAnimator.swift in Sources */,
 				60E7C1931FDBCA0C0013FA59 /* TodoDetailViewController.swift in Sources */,
+				60BAB2C71FDDC138004DA7CD /* ContainerViewController.swift in Sources */,
 				60BAB2C41FDDBB27004DA7CD /* FadeOutDismissedAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

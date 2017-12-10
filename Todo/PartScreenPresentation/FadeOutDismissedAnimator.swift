@@ -10,7 +10,7 @@ import UIKit
 
 class FadeOutDismissedAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
-  let duration: TimeInterval = 0.13
+  let duration: TimeInterval = 0.33
 
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
     return duration

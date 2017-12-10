@@ -18,7 +18,11 @@ class TodosViewController: UIViewController {
   }
 
   @IBAction func addTodo(_ sender: Any) {
-    performSegue(withIdentifier: "AddTodo", sender: sender)
+    performSegue(withIdentifier: "AddTodo", sender: self)
+  }
+
+  @IBAction func showMenu(_ sender: Any) {
+    performSegue(withIdentifier: "ShowMenu", sender: self)
   }
 
   @IBAction func saveTodo(_ segue: UIStoryboardSegue) {

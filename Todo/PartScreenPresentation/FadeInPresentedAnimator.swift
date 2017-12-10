@@ -10,7 +10,7 @@ import UIKit
 
 class FadeInPresentedAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
-  let duration: TimeInterval = 0.2
+  let duration: TimeInterval = 0.33
 
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
     return duration

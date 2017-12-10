@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lUL-Ic-aoV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fb5-aZ-SYY">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Container View Controller-->
+        <scene sceneID="IcM-Mz-POA">
+            <objects>
+                <viewController id="Fb5-aZ-SYY" customClass="ContainerViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TA9-2Q-Hwz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpX-DX-ljX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <connections>
+                                    <segue destination="lUL-Ic-aoV" kind="embed" id="dDF-29-RQG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WpX-DX-ljX" secondAttribute="trailing" id="1mc-Hl-CjS"/>
+                            <constraint firstItem="WpX-DX-ljX" firstAttribute="top" secondItem="TA9-2Q-Hwz" secondAttribute="top" id="Epn-A5-bAF"/>
+                            <constraint firstAttribute="bottom" secondItem="WpX-DX-ljX" secondAttribute="bottom" id="RWF-P4-Pcj"/>
+                            <constraint firstItem="WpX-DX-ljX" firstAttribute="leading" secondItem="TA9-2Q-Hwz" secondAttribute="leading" id="wnL-8J-oTI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f9d-p3-aqn"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="WpX-DX-ljX" id="ySQ-9J-hf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rR-E8-dYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-898" y="137"/>
+        </scene>
         <!--Todos View Controller-->
         <scene sceneID="RYg-D8-Fwe">
             <objects>
@@ -32,6 +64,14 @@
                                     <action selector="addTodo:" destination="lUL-Ic-aoV" eventType="touchUpInside" id="b2Z-f1-H8i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQn-FE-1bE">
+                                <rect key="frame" x="8" y="732" width="108" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Show Menu"/>
+                                <connections>
+                                    <action selector="showMenu:" destination="lUL-Ic-aoV" eventType="touchUpInside" id="NM3-Tx-KXt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -39,19 +79,31 @@
                             <constraint firstItem="gEC-ox-MkA" firstAttribute="leading" secondItem="qov-zw-5vY" secondAttribute="leading" id="B4i-Y1-dyH"/>
                             <constraint firstItem="qov-zw-5vY" firstAttribute="trailing" secondItem="WEZ-Sb-37g" secondAttribute="trailing" constant="8" id="Hre-Xa-C1w"/>
                             <constraint firstItem="qov-zw-5vY" firstAttribute="bottom" secondItem="WEZ-Sb-37g" secondAttribute="bottom" constant="8" id="MN4-oc-DfO"/>
+                            <constraint firstItem="qov-zw-5vY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pQn-FE-1bE" secondAttribute="trailing" priority="250" constant="8" id="Oru-Wx-bSI"/>
                             <constraint firstAttribute="bottom" secondItem="gEC-ox-MkA" secondAttribute="bottom" id="SGJ-s4-fbW"/>
+                            <constraint firstItem="qov-zw-5vY" firstAttribute="bottom" secondItem="pQn-FE-1bE" secondAttribute="bottom" constant="8" id="fQQ-kD-98M"/>
                             <constraint firstItem="qov-zw-5vY" firstAttribute="trailing" secondItem="gEC-ox-MkA" secondAttribute="trailing" id="gdF-3Z-z7S"/>
-                            <constraint firstItem="WEZ-Sb-37g" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qov-zw-5vY" secondAttribute="leading" priority="250" constant="8" id="rYX-XD-kZq"/>
+                            <constraint firstItem="WEZ-Sb-37g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qov-zw-5vY" secondAttribute="leading" priority="250" constant="8" id="rYX-XD-kZq"/>
+                            <constraint firstItem="pQn-FE-1bE" firstAttribute="leading" secondItem="qov-zw-5vY" secondAttribute="leading" constant="8" id="yag-Ke-1nu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qov-zw-5vY"/>
                     </view>
                     <connections>
                         <segue destination="JGz-Nj-SNc" kind="custom" identifier="AddTodo" customClass="PartScreenSegue" customModule="TodoApp" customModuleProvider="target" id="jBY-cA-h95"/>
+                        <segue destination="szB-tO-bP6" kind="showDetail" identifier="ShowMenu" id="DOb-zL-Tzq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JP-it-3YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="135.96059113300493"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="7a4-t8-bNs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="szB-tO-bP6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEY-OM-8Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-416" y="714"/>
         </scene>
         <!--TodoDetail-->
         <scene sceneID="7oU-SM-bHn">

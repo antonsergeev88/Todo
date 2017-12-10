@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Peg-6h-Zhi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="gY1-bL-Fn2">
+            <objects>
+                <viewController id="Peg-6h-Zhi" customClass="MenuViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DDk-uu-kV2">
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHz-8d-Ak4">
+                                <rect key="frame" x="99.5" y="40" width="76" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KK-uM-CoZ">
+                                <rect key="frame" x="149" y="605" width="118" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Hide Menu"/>
+                                <connections>
+                                    <action selector="hideMenu:" destination="Peg-6h-Zhi" eventType="touchUpInside" id="9BH-AF-azq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UXt-xQ-RwH" firstAttribute="bottom" secondItem="5KK-uM-CoZ" secondAttribute="bottom" constant="20" id="3W8-7d-Kh3"/>
+                            <constraint firstItem="UXt-xQ-RwH" firstAttribute="trailing" secondItem="5KK-uM-CoZ" secondAttribute="trailing" constant="8" id="OSy-AM-jlS"/>
+                            <constraint firstItem="VHz-8d-Ak4" firstAttribute="top" secondItem="UXt-xQ-RwH" secondAttribute="top" constant="20" id="ZcD-PG-H12"/>
+                            <constraint firstItem="VHz-8d-Ak4" firstAttribute="centerX" secondItem="DDk-uu-kV2" secondAttribute="centerX" id="nFb-pe-vu9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UXt-xQ-RwH"/>
+                    </view>
+                    <size key="freeformSize" width="275" height="667"/>
+                    <connections>
+                        <segue destination="5RQ-t8-Cnq" kind="unwind" identifier="HideMenu" unwindAction="hideMenu:" id="wm3-gh-3ES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0u-dn-Uhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5RQ-t8-Cnq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="4"/>
+        </scene>
+    </scenes>
+</document>
