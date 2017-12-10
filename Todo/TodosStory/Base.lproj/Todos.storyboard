@@ -13,7 +13,7 @@
         <!--Todos View Controller-->
         <scene sceneID="RYg-D8-Fwe">
             <objects>
-                <viewController id="lUL-Ic-aoV" customClass="TodosViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lUL-Ic-aoV" customClass="TodosViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Txm-7N-890">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,12 +59,12 @@
                 <viewControllerPlaceholder storyboardName="TodoDetail" id="JGz-Nj-SNc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxX-E4-adA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165" y="700"/>
+            <point key="canvasLocation" x="441" y="739"/>
         </scene>
         <!--Todo List View Controller-->
         <scene sceneID="4gd-qb-AJD">
             <objects>
-                <tableViewController id="b3x-Jd-6DY" customClass="TodoListViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="b3x-Jd-6DY" customClass="TodoListViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nDC-eL-ysm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +93,16 @@
                             <outlet property="delegate" destination="b3x-Jd-6DY" id="hos-oD-yrf"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="EditTodo" id="jXg-Gp-jNe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rls-DY-oEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="136"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jXg-Gp-jNe"/>
+    </inferredMetricsTieBreakers>
 </document>
