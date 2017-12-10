@@ -8,21 +8,13 @@
 
 import UIKit
 
-class TodoListViewController: UITableViewController, ContentObjectRepresentable {
+class TodoListViewController: UITableViewController {
 
-  var representedObject: Any? {
-    get {
-      return todos
-    }
-    set {
-      guard let newValue = newValue as? [Titled] else {
-        return
-      }
-      todos = newValue
+  var todos: [Titled] = [] {
+    didSet {
+      tableView.reloadData()
     }
   }
-
-  var todos: [Titled] = []
 
   // MARK: - Table view data source
 
@@ -43,4 +35,17 @@ class TodoListViewController: UITableViewController, ContentObjectRepresentable 
     return cell
   }
 
+}
+
+// MARK: - ContentObjectRepresentable
+
+extension TodoListViewController: ContentObjectRepresentable {
+  var representedObject: Any? {
+    get {
+      return todos
+    }
+    set {
+      todos = newValue is [Titled] ? newValue as! [Titled] : todos
+    }
+  }
 }

@@ -10,17 +10,46 @@ import UIKit
 
 class TodoDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  var todo: Titled?
 
-        // Do any additional setup after loading the view.
-    }
+  @IBOutlet weak var titleField: UITextField!
 
   @IBAction func save(_ sender: Any) {
-    performSegue(withIdentifier: "SaveTodoSegue", sender: self)
+    performSegue(withIdentifier: "SaveTodo", sender: self)
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    print("prepare for SaveTodoSegue")
+  @objc func prepareForSaveTodo(_ segue: UIStoryboardSegue, sender: Any?) {
+    todo?.title = titleField.text
   }
+
+}
+
+// MARK: - ContentObjectRepresentable
+
+extension TodoDetailViewController: ContentObjectRepresentable {
+  var representedObject: Any? {
+    get {
+      return todo
+    }
+    set {
+      todo = newValue as? Todo
+    }
+  }
+}
+
+// MARK: - Preparable
+
+extension TodoDetailViewController {
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard let identifier = segue.identifier else {
+      return
+    }
+    let actionName = "prepareFor" + identifier + ":sender:"
+    let action = Selector(actionName)
+    if self.responds(to: action) {
+      self.perform(action, with: segue, with: sender)
+    }
+  }
+
 }

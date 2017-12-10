@@ -46,7 +46,7 @@
                         <viewLayoutGuide key="safeArea" id="qov-zw-5vY"/>
                     </view>
                     <connections>
-                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="AddTodoSegue" id="jBY-cA-h95"/>
+                        <segue destination="JGz-Nj-SNc" kind="presentation" identifier="AddTodo" id="jBY-cA-h95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JP-it-3YD" userLabel="First Responder" sceneMemberID="firstResponder"/>

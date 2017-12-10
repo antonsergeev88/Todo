@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Titled {
-  var title: String? { get }
+  var title: String? { get set }
 }

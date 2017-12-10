@@ -65,7 +65,8 @@
                     <value key="contentSizeForViewInPopover" type="size" width="300" height="250"/>
                     <size key="freeformSize" width="300" height="250"/>
                     <connections>
-                        <segue destination="5te-ML-0NL" kind="unwind" identifier="SaveTodoSegue" unwindAction="saveTodo:" id="nkH-Gr-K8Z"/>
+                        <outlet property="titleField" destination="Onr-pc-n6I" id="omt-bc-lHl"/>
+                        <segue destination="5te-ML-0NL" kind="unwind" identifier="SaveTodo" unwindAction="saveTodo:" id="nkH-Gr-K8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UX4-Oc-y1d" userLabel="First Responder" sceneMemberID="firstResponder"/>

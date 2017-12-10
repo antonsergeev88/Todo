@@ -10,7 +10,44 @@ import UIKit
 
 class TodosViewController: UIViewController {
 
-  var todos: [Todo] = [Todo("asdf"), Todo("qwerty"), Todo("zxcbasdf")]
+  var todos: [Todo] = [Todo("Make a kind thing"), Todo("Make a good thing"), Todo("Make a bad thing")] {
+    didSet {
+      childViewControllers.flatMap { $0 as? ContentObjectRepresentable }
+        .forEach { $0.representedObject = todos }
+    }
+  }
+
+  @IBAction func addTodo(_ sender: Any) {
+    performSegue(withIdentifier: "AddTodo", sender: sender)
+  }
+
+  @IBAction func saveTodo(_ segue: UIStoryboardSegue) {
+    guard let source = segue.source as? ContentObjectRepresentable,
+      let todo = source.representedObject as? Todo else {
+      return
+    }
+    todos.append(todo)
+  }
+
+  @objc func prepareForTodoList(_ segue: UIStoryboardSegue, sender: Any?) {
+    guard let destination = segue.destination as? ContentObjectRepresentable else {
+      return
+    }
+    destination.representedObject = todos
+  }
+
+  @objc func prepareForAddTodo(_ segue: UIStoryboardSegue, sender: Any?) {
+    guard let destination = segue.destination as? ContentObjectRepresentable else {
+      return
+    }
+    destination.representedObject = Todo()
+  }
+
+}
+
+// MARK: - Preparable
+
+extension TodosViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let identifier = segue.identifier else {
@@ -21,21 +58,6 @@ class TodosViewController: UIViewController {
     if self.responds(to: action) {
       self.perform(action, with: segue, with: sender)
     }
-  }
-
-  @IBAction func addTodo(_ sender: Any) {
-    performSegue(withIdentifier: "AddTodoSegue", sender: sender)
-  }
-
-  @IBAction func saveTodo(_ segue: UIStoryboardSegue) {
-    print("saveTodo")
-  }
-
-  @objc func prepareForTodoList(_ segue: UIStoryboardSegue, sender: Any?) {
-    guard let destination = segue.destination as? ContentObjectRepresentable else {
-      return
-    }
-    destination.representedObject = todos
   }
 
 }
