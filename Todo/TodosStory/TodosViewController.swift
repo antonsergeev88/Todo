@@ -26,7 +26,11 @@ class TodosViewController: UIViewController {
       let todo = source.representedObject as? Todo else {
       return
     }
-    todos.append(todo)
+    if let index = todos.index(where: { $0.id == todo.id })  {
+      todos[index] = todo
+    } else {
+      todos.append(todo)
+    }
   }
 
   @objc func prepareForTodoList(_ segue: UIStoryboardSegue, sender: Any?) {
