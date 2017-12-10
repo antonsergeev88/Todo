@@ -15,6 +15,9 @@ class ContainerViewController: UIViewController {
   var menuView: UIView?
 
   override func showDetailViewController(_ vc: UIViewController, sender: Any?) {
+    guard self.menuView == nil else {
+      return
+    }
     let menuView = UIView()
     self.menuView = menuView
     var frame = contentView.frame
