@@ -18,6 +18,7 @@ class ContainerViewController: UIViewController {
     guard self.menuView == nil else {
       return
     }
+    addChildViewController(vc)
     let menuView = UIView()
     self.menuView = menuView
     var frame = contentView.frame
@@ -26,8 +27,8 @@ class ContainerViewController: UIViewController {
     let menuTransform = CGAffineTransform(translationX: -frame.width, y: 0.0)
     let contentTransform = CGAffineTransform(translationX: frame.width, y: 0.0)
     vc.view.frame = menuView.bounds
-    menuView.addSubview(vc.view)
     view.addSubview(menuView)
+    menuView.addSubview(vc.view)
     view.bringSubview(toFront: contentView)
     menuView.transform = menuTransform
     UIView.animate(withDuration: 0.33, animations: {
@@ -43,6 +44,7 @@ class ContainerViewController: UIViewController {
     }, completion: { complene in
       self.menuView?.removeFromSuperview()
       self.menuView = nil
+      segue.source.removeFromParentViewController()
     })
   }
 
